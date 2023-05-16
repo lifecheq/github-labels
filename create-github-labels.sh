@@ -15,7 +15,7 @@
 GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 REPO="${REPO:-$1}"
 # Delete existing labels to mirror the list below.
-DELETE_EXISTING_LABELS="${DELETE_EXISTING_LABELS:-1}"
+DELETE_EXISTING_LABELS="${DELETE_EXISTING_LABELS:-0}"
 
 # Array of labels to create. If DELETE_EXISTING_LABELS=1, the labels list will
 # be exactly as below, otherwise labels below will be added to existing ones.
@@ -25,6 +25,7 @@ LABELS=(
   "Risk: high" "E99695" "High Risk change"
   "Risk: low" "C2E0C6" "Low Risk change"
   "Risk: medium" "FEF2C0" "Medium Risk change"
+  "Tested in Dev" "1C6CC9" "The change was manually tested in dev and it is ready to go to staging"
 )
 
 ## Labels that we will not delete
